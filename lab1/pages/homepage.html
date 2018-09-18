@@ -1,0 +1,54 @@
+<div>
+  <div class="" style="margin-top: 20px;">
+  <div class="" >
+    <div style="margin: 50px 300px;text-align:center;">
+        <h5>Knowledge Graph Search</h5>
+        <form class="navbar-form" role="search">
+        <div class="input-group add-on">
+          <input class="form-control"  placeholder="Enter value to search" ng-model="Name" type="text">
+          <div class="input-group-btn">
+
+            <div id="result"></div>
+            <button onclick="startConverting();"><i class="fa fa-microphone"></i></button>
+            <button class="btn btn-default" ng-click="KGSearch(Name)"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <div class="container">
+      <div class="row well" >
+        <div  ng-repeat="data in kgraphRecords" >
+          <div class="col-sm-3 " ng-if="data.result.image.contentUrl" >
+            <div style="width: 200px; margin-left: 10px;">
+            <img class=" img-responsive"  src={{data.result.image.contentUrl}} alt="Card image cap">
+            <div class="">
+              <h5 class="">{{data.result.name}}</h5>
+              <p class="">{{data.result.description}}</p>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="" style="margin-top: 20px;">
+  <div class="">
+  <div style="margin: 50px 300px;text-align:center;">
+      <h5>Facts about numbers</h5>
+    <form class="navbar-form" role="search">
+      <div class="input-group add-on">
+        <input class="form-control" placeholder="Enter number" ng-model="ingrName" type="text">
+        <div class="input-group-btn">
+          <button class="btn btn-default" ng-click="ingrSearch(ingrName)"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+    <div class="well">{{data}}</div>
+
+  </div>
+  </div>
+</div>

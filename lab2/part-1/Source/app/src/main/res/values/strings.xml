@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">lab2</string>
+    <string name="e_mail">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="minlength">password should be atleast 6 characters</string>
+    <string name="authfailed">Authentication failed</string>
+    <string name="takepicture">Take photo</string>
+    <string name="extracttext">Extract Text</string>
+    <string name="logout">Logout</string>
+
+</resources>

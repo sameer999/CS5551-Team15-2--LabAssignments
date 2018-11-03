@@ -1,0 +1,63 @@
+<div class="container">
+  <h2 class ="page-header"> Add Vote</h2>
+  <hr>
+  <form (submit) = "addVote()">
+      <div class="form-group">
+          <label>user ID</label>
+          <input type="text" [(ngModel)]="user_id" name="user_id" class="form-control">
+      </div>
+    <div class="form-group">
+      <label>Vote title</label>
+      <input type="text" [(ngModel)]="vote_title" name="vote_title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>option1</label>
+        <input type="text" [(ngModel)]="option1" name="option1" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>option2</label>
+        <input type="text" [(ngModel)]="option2" name="option2" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>option3</label>
+        <input type="text" [(ngModel)]="option3" name="option3" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>option4</label>
+        <input type="text" [(ngModel)]="option4" name="option4" class="form-control">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Add">
+
+    
+  </form>
+</div>
+<hr>
+
+<div class="container">
+<div class="col-9">
+  
+
+
+    <div *ngFor = "let vote of votes">
+      <div>
+        <a [routerLink]="['user']"><h2>{{vote.vote_title}}</h2></a>
+      </div>
+      <div class="col-md-2">
+        {{vote.option1}}
+      </div>
+      <div class="col-md-2">
+        {{vote.option2}}
+      </div>
+      <div class="col-md-2">
+        {{vote.option3}}
+      </div>
+      <div class="col-md-2">
+        {{vote.option4}}
+      </div>
+      <div class="col-md-2">
+        <input type="button" (click)="deleteVote(vote._id)" value="Delete" class="btn btn-danger">
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>
